@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE
+}
+
+
+
+/* CONTAINER */
+
+.container {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 40rem;
+    justify-content: space-between;
+    align-items:stretch;
+    box-shadow: 0px 10px 50px rgb(75, 72, 72);
+}
+
+/* SEARCH BOX */
+
+.search-box{
+    height: 15rem;    
+    margin: auto;   
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    width: 50%;
+}
+
+/* USER INFO */
+
+.user-data {    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+img {
+    max-height: 150px;
+}
