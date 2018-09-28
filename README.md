@@ -35,6 +35,7 @@ Gnomes in this town are not really social because they have too much work to do.
 ## TECHNOLOGIES
 
 ![HTML5,CSS3 and JS](./docs/html5-css3-js.png)
+[![Bootstrap](./docs/bootstrap.png)](http://getbootstrap.com/)
 [![React](./docs/react.png)](https://facebook.github.io/react/)
 
 

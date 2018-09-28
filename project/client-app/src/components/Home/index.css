@@ -43,5 +43,57 @@ html, body {
 }
 
 img {
-    max-height: 150px;
+    max-height: 100px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+.section {
+    text-align: left;
+    color: brown;
+}
+
+.title {
+    text-align: center;
+    color: brown;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 10px;
+}
+
+.card-group {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.field {
+    margin-top: 5px;
+    height: 35px;
+}
+
+.searchField {
+    margin-top: 5px;
+    background-color: #E5FCC2;
+    padding: 0px;
+  }
+
+.button {
+    margin-top: 5px;
+    text-align: right;
+}
+
+a {
+    color: white;
+}
+
+.professions, .friends {
+    float: left;
+}
+
+.professionsTitle, friendsTitle {
+    clear: both;
 }
