@@ -17,6 +17,7 @@ class Home extends Component {
     this.setState({ user: event.target.value })
     let gnome = this.state.users[event.target.value].name
     let userName = document.getElementsByClassName('title')
+    let image = document.getElementsByClassName('img')
     let professionsTitle = document.getElementsByClassName('professionsTitle')
     let professionsData = document.getElementsByClassName('professionsData')
     let friendsTitle = document.getElementsByClassName('friendsTitle')
@@ -34,18 +35,19 @@ class Home extends Component {
       friends += `<li>${friend}</li>`
     })
 
+    image[0].innerHTML = `<img src='${this.state.users[event.target.value].thumbnail}' alt="user-picture">`
     professionsTitle[0].innerHTML = "Professions"
     professionsData[0].innerHTML = `<ul>${professions}</ul>`
 
-    friendsTitle[0].innerHTML = "Friends"
-    friendsData[0].innerHTML = `<ul>${friends}</ul>`
-
-    // userData[0].innerHTML = `
+        // userData[0].innerHTML = `
     //   <img src='${this.state.users[event.target.value].thumbnail}' alt="user-picture">
     //   <h6>Professions</h6>
     //   <ul>${professions}</ul>
     //   <ul>${friends}</ul>
     // `
+
+    friendsTitle[0].innerHTML = "Friends"
+    friendsData[0].innerHTML = `<ul>${friends}</ul>`
   }
   
   componentDidMount() {
@@ -60,7 +62,7 @@ class Home extends Component {
               <div className="container">
                 <div className="row">
                   <div className="card-title section">
-                    <h6>Search by Gnome</h6>
+                    {/* <h6>Search by Gnome</h6> */}
                   </div>
                   
                   <div className="col-12">
@@ -82,20 +84,19 @@ class Home extends Component {
                 </div>
                 <div className="row">
                   <div className="col-md-12 title"></div>
-                  <div className="card-group">
-                      <div className="professions col-6">
+                  <div className="card-group col-12">
+                      <div className="img col-3"></div>
+                      <div className="professions col-4">
                         <div className="professionsTitle"></div>
                         <div className="professionsData"></div>
                       </div>
-                      <div className="friends col-6">
+                      <div className="friends col-5">
                         <div className="friendsTitle"></div>
                         <div className="friendsData"></div>
                       </div>
                   </div>
                 </div>
               </div>
-
-              
         </main>
     )
   }

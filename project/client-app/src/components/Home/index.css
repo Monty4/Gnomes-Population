@@ -4,8 +4,6 @@ html, body {
     background-color: #EEEEEE
 }
 
-
-
 /* CONTAINER */
 
 .container {
@@ -94,6 +92,8 @@ a {
     float: left;
 }
 
-.professionsTitle, friendsTitle {
+.professionsTitle, .friendsTitle {
+    font-size: large;
+    font-weight: bold;
     clear: both;
 }
