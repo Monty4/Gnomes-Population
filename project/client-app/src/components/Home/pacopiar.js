@@ -16,22 +16,12 @@ class Home extends Component {
   fillUser = (event) => {
     this.setState({ user: event.target.value })
     let gnome = this.state.users[event.target.value].name
-    
-
-    let image = document.getElementsByClassName('img')
-    let userData = document.getElementsByClassName('data')
     let userName = document.getElementsByClassName('title')
+    let image = document.getElementsByClassName('img')
     let professionsTitle = document.getElementsByClassName('professionsTitle')
     let professionsData = document.getElementsByClassName('professionsData')
     let friendsTitle = document.getElementsByClassName('friendsTitle')
     let friendsData = document.getElementsByClassName('friendsData')
-
-    image[0].innerHTML = `<img src='${this.state.users[event.target.value].thumbnail}' alt="user-picture">`
-
-    userData[0].innerHTML = `Age: ${this.state.users[event.target.value].age}</br>
-    Weight: ${this.state.users[event.target.value].weight}<br>
-    Height: ${this.state.users[event.target.value].height}
-    `
 
     userName[0].innerHTML = `<h5><p>${gnome}</p></h5>`
 
@@ -45,11 +35,18 @@ class Home extends Component {
       friends += `<li>${friend}</li>`
     })
 
-    
+    image[0].innerHTML = `<img src='${this.state.users[event.target.value].thumbnail}' alt="user-picture">`
     professionsTitle[0].innerHTML = "Professions"
     professionsData[0].innerHTML = `<ul>${professions}</ul>`
 
-       friendsTitle[0].innerHTML = "Friends"
+        // userData[0].innerHTML = `
+    //   <img src='${this.state.users[event.target.value].thumbnail}' alt="user-picture">
+    //   <h6>Professions</h6>
+    //   <ul>${professions}</ul>
+    //   <ul>${friends}</ul>
+    // `
+
+    friendsTitle[0].innerHTML = "Friends"
     friendsData[0].innerHTML = `<ul>${friends}</ul>`
   }
   
@@ -64,28 +61,23 @@ class Home extends Component {
           <main>
               <div className="container">
                 <div className="row">
-                  <div className="card-title section"></div>
+                  <div className="card-title section">
+                    {/* <h6>Search by Gnome</h6> */}
+                  </div>
                   
                   <div className="col-12">
                     <div className="card searchField">
                       <div className="card-body">
-                        <div className="form col-6">
-                          <form className="search-box">
-                            <select size="20" onChange={this.fillUser}>
-                                <option className="field" value="">Select Gnome</option>
-                                {
-                                  this.state.users.map(user => {
-                                    return <option className="field" value={user.id}>{user.name}</option>
-                                  })
-                                }
-                              </select>
-                          </form>
-                        </div>
-                        <div className="characteristics col-6">
-                          <div className="img"></div>
-                          <div className="data"></div>
-
-                        </div>
+                      <form className="search-box">
+                        <select size="20" onChange={this.fillUser}>
+                            <option className="field" value="">Select Gnome</option>
+                            {
+                              this.state.users.map(user => {
+                                return <option className="field" value={user.id}>{user.name}</option>
+                              })
+                            }
+                          </select>
+                      </form>
                       </div>
                     </div>
                   </div>
@@ -93,7 +85,8 @@ class Home extends Component {
                 <div className="row">
                   <div className="col-md-12 title"></div>
                   <div className="card-group col-12">
-                        <div className="professions col-4">
+                      <div className="img col-3"></div>
+                      <div className="professions col-4">
                         <div className="professionsTitle"></div>
                         <div className="professionsData"></div>
                       </div>
