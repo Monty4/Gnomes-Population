@@ -30,22 +30,23 @@ Gnomes in this town are not really social because they have too much work to do.
 
 ## Personal API's and APP
 
-- API Client, API Server and Client APP
+- API Client: Retrieves data from URL
+- Client APP: We render two components, Header and the Home. 
+  - Header Component only shows de title.
+  - Home Component allows to select the name of the Gnome and shows their image and characteristics on top, and their professions and friends on bottom.
 
 ## TECHNOLOGIES
 
-![HTML5,CSS3 and JS](../docs/html5-css3-js.png)
-[![Bootstrap](../docs/bootstrap.png)](http://getbootstrap.com/)
-[![React](../docs/react.png)](https://facebook.github.io/react/)
-[![NodeJS](../docs/nodejs.png)](https://nodejs.org/)
-<!-- [![MongoDB](../docs/mongodb.png)](https://www.mongodb.com/) -->
-
+![HTML5,CSS3 and JS](../../docs/html5-css3-js.png)
+[![Bootstrap](../../docs/bootstrap.png)](http://getbootstrap.com/)
+[![React](../../docs/react.png)](https://facebook.github.io/react/)
 
 - HTML5, CSS3, BOOTSRAP 4
 - JS
-- Express
-- MongoDB
-- Node Server
 - REACT
+
+## SURGE DEPLOYMENT URL
+
+[Gnome-Population](http://gnome-population.surge.sh)
 
 ## DEVELOPER: Mario Montalbán
